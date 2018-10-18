@@ -2,29 +2,54 @@
   "name": "google-calendar-slack-status",
   "version": "1.0.0",
   "description": "Automatically sync your Google Calendar events to your Slack status",
-  "main": "index.js",
+  "main": "lib/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint lib",
+    "start": "cross-env NODE_ENV=development nodemon lib/server.js | bunyan",
+    "debug": "cross-env NODE_ENV=development nodemon lib/server.js --inspect | bunyan",
+    "prod": "cross-env NODE_ENV=production node lib/server.js"
   },
   "engines": {
     "node": "8.9.4"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bjork24/google-calendar-slack-status.git"
+    "url": "git+https://github.com/arizonatribe/google-calendar-slack-status.git"
   },
-  "keywords": [],
-  "author": "Dan Chilton <dan.chilton@gmail.com>",
+  "keywords": [
+    "express",
+    "nodejs",
+    "slack",
+		"slack status",
+    "google",
+    "google calendar"
+  ],
+  "author": [
+    "Dan Chilton <dan.chilton@gmail.com>",
+    "David Nunez <arizonatribe@gmail.com>"
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bjork24/google-calendar-slack-status/issues"
+    "url": "https://github.com/arizonatribe/google-calendar-slack-status/issues"
   },
-  "homepage": "https://github.com/bjork24/google-calendar-slack-status#readme",
+  "homepage": "https://github.com/arizonatribe/google-calendar-slack-status#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "moment": "^2.20.1",
-    "morgan": "^1.9.0",
-    "slack": "^10.1.1"
+    "body-parser": "1.18.2",
+    "date-fns": "1.29.0",
+    "envalid": "4.1.4",
+    "express": "4.16.3",
+    "express-bunyan-logger": "1.3.2",
+    "slack": "10.1.1"
+  },
+  "devDependencies": {
+    "bunyan": "1.8.12",
+    "cross-env": "5.0.5",
+    "eslint": "4.5.0",
+    "eslint-config-airbnb-base": "11.3.2",
+    "eslint-plugin-flowtype": "2.35.0",
+    "eslint-plugin-graphql": "2.1.1",
+    "eslint-plugin-import": "2.7.0",
+    "env-cmd": "7.0.0",
+    "nodemon": "1.11.0"
   }
 }
