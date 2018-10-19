@@ -1,5 +1,6 @@
 {
   "name": "google-calendar-slack-status",
+  "private": true,
   "version": "1.0.0",
   "description": "Automatically sync your Google Calendar events to your Slack status",
   "main": "lib/server.js",
@@ -20,7 +21,7 @@
     "express",
     "nodejs",
     "slack",
-		"slack status",
+    "slack status",
     "google",
     "google calendar"
   ],
@@ -35,7 +36,7 @@
   "homepage": "https://github.com/arizonatribe/google-calendar-slack-status#readme",
   "dependencies": {
     "body-parser": "1.18.2",
-    "date-fns": "1.29.0",
+    "date-fns": "2.0.0-alpha.23",
     "envalid": "4.1.4",
     "express": "4.16.3",
     "express-bunyan-logger": "1.3.2",
