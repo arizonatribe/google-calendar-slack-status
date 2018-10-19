@@ -42,7 +42,8 @@
     "no-undef": "error",
     "no-underscore-dangle": "off",
     "no-unused-vars": [
-			"error", {
+			"error",
+      {
         "argsIgnorePattern": "^_"
       }
     ],
