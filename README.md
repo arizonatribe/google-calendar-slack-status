@@ -59,3 +59,18 @@ SLACK_TOKEN=<put your slack USER token here, which starts with "xoxp-">
 Click the button below to begin your journey:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## Finding your SLACK_TOKEN
+
+Slack recently changed how users interact with their API. To find your SLACK_TOKEN, follow these instructions:
+
+1. Create a new Slack bot [here](https://api.slack.com/apps?new_app=1).
+
+1. Once the app has been created, click on the "OAuth & Permissions" link on the sidebar
+
+1. Scroll down to "Scopes" and set the following permissions:
+  - `dnd:write`
+  - `users.write`
+  - `users.profile:write`
+
+1. Copy the `OAuth Access Token` at the top of the page, and use it as your **SLACK_TOKEN**
